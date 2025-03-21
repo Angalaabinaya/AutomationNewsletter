@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f1eb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #4b0082;
+            margin: 0;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .images img {
+            border-radius: 10px;
+        }
+
+        .images img:nth-child(7),
+        .images img:nth-child(8) {
+            grid-column: span 2;
+        }
+
+        .newsletter-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-title h2 {
+            font-size: 2em;
+            color: #4b0082;
+            margin: 0;
+        }
+
+        .main-image {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .main-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #4b0082;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .logo {
+            height: 230px;
+            width: 170px;
+        }
+
+        .same-img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            max-height: 250px;
+        }
+
+        .diff-img {
+            width: 100%;
+            height: auto;
+            max-width: 180px;
+            max-height: 180px;
+        }
+
+        .dir {
+            width: 300px;
+            height: 200px;
+        }
+
+        .page {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontainer" id="maincontent">
+        <div class="container" id="content">
+            <div class="header">
+                <h1>NITTTR CHENNAI</h1>
+            </div>
+            <div class="images">
+                <img src="directer.jpeg" alt="Image 1" class="logo">
+                <img src="directer.jpeg" alt="Image 2" class="diff-img" style="border-radius: 100px 0 100px 0;">
+                <img src="directer.jpeg" alt="Image 3" class="same-img1" style="border-radius: 100px 0 100px 0;">
+                <img src="directer.jpeg" alt="Image 4" class="same-img" style="border-radius: 100px 0 100px 0;">
+                <img src="directer.jpeg" alt="Image 5" class="same-img" style="border-radius: 100px 0 100px 0;">
+                <img src="directer.jpeg" alt="Image 6" class="same-img" style="border-radius: 100px 0 100px 0;">
+                <img src="directer.jpeg" alt="Image 7" class="same-img" style="border-radius: 100px 0 100px 0;">
+                <img src="directer.jpeg" alt="Image 8" class="diff-img" style="border-radius: 100px 0 100px 0;">
+            </div>
+            <div class="newsletter-title">
+                <h2>NEWSLETTER</h2>
+            </div>
+            <div class="main-image">
+                <img src="main.jpeg" alt="Main Image" height="250px" width="300px">
+                <div class="footer">
+                    <p>HALF YEARLY | VOLUME 5, ISSUE 2 | JULY - DECEMBER 2022</p>
+                    <p>NITTTR, CHENNAI</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page">
+            <h2>Director’s Message</h2>
+            <img src="directer.jpeg" alt="" class="dir" height="200px" width="200px">
+            <div class="footer">
+                <p>HALF YEARLY | VOLUME 5, ISSUE 2 | JULY - DECEMBER 2022</p>
+                <p>NITTTR, CHENNAI</p>
+            </div>
+            <h2>Director’s Message</h2>
+            <p>Greetings from NITTTR, Chennai.</p>
+            <p>I am pleased to extend greetings to the readers of volume 5, issue 2 of the NITTTR, Chennai Newsletter. Since its establishment in 1964, the National Institute of Technical Teachers Training and Research (NITTTR), Chennai has provided high-quality teacher education by motivating, energizing and building teachers’ intellectual and social capacity.</p>
+            <p>The Institute’s academic and socio-cultural events in the second half of 2022 conceptualize a vibrant multidisciplinary institution supporting the Nation’s cause for self-reliance and holistic development. Encouraging teachers to rise above the challenges of virtual teaching- learning scenarios and providing counselling support for students struggling to continue their education are the commitments of NITTTR, Chennai. I am happy to be a part of this belief to transform our country’s teacher education landscape.</p>
+            <p>Prof. Dr. Usha Natesan Director, NITTTR, Chennai</p>
+        </div>
+    </div>
+    <button id="download" class="download-btn">Download PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.getElementById('download').addEventListener('click', downloadPDF);
+
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const content = document.getElementById('content');
+
+            html2canvas(content).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF('p', 'pt', 'a4');
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                
+                // Calculate the number of pages
+                const imgProps = pdf.getImageProperties(imgData);
+                const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
+                heightLeft -= pdfHeight;
+
+                while (heightLeft >= 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+                }
+
+                pdf.save('newsletter.pdf');
+            });
+        }
+    </script>
+</body>
+</html>

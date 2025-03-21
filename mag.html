@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITTTR Chennai Newsletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .page1 {
+            background-image: url('static/bbg2.jpg');
+            background-size: cover;
+            background-position: center;
+            
+        }
+        
+        .page1, .page2 {
+            width: 210mm; /* Width of A4 paper */
+            height: 297mm; /* Height of A4 paper */
+            margin: auto;
+            background-color: white;
+            padding: 16mm;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        header {
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #4b2e83;
+            font-weight: 900;
+            display: inline-block;
+        }
+
+        header .llogo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        main {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            height: 514px;
+        }
+
+        .images-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .page1 h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #4b2e83;
+            margin: 20px 0;
+            font-weight: 900;
+            text-shadow: 3px 2px 11px white, 5px 17px 32px white, 0px -3px 14px white;
+        }
+
+        .page1 .main-img {
+            width: 100%;
+            height: 348px;
+        }
+
+        .page1 footer {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 205px;
+        }
+
+        .page2 header h2 {
+            font-size: 24px;
+            color: #4b2e83;
+        }
+
+        .director-message {
+            border-top: 2px solid #4b2e83;
+            padding-top: -4px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 3px;
+        }
+
+        .director-message h3 {
+            background-color: #4b2e83;
+            color: white;
+            font-size: 20px;
+        }
+
+        .director-message .director-img {
+            width: 150px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border: 2px solid black;
+        }
+
+        .director-message p {
+            text-align: justify;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .inside-this-issue {
+            margin-top: -21px;
+            border-top: 2px solid #4b2e83;
+            background-color: #4b2e83;
+            padding-top: 1px;
+            width: 100%;
+            height: 165px;
+        }
+
+        .inside-this-issue h3 {
+            color: black;
+            background-color: white;
+            font-size: 20px;
+            margin-top: 14px;
+            padding: 5px;
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        .inside-this-issue p {
+            font-size: 14px;
+            color: white;
+            text-align: justify;
+            padding: 6px;
+        }
+
+        .page2 footer {
+            text-align: right;
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .nittr {
+            text-align: left;
+            display: inline-block;
+        }
+
+        h1.nittr {
+            width: 400px;
+        }
+
+        .bgdiv {
+            background-color: #4b2e83;
+            color:#4b2e83
+        }
+
+        .page2h {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .monthfooter {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: absolute;
+            top: 820px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .monthfooter p {
+            color: white;
+            font-size: larger;
+        }
+
+        footer.monthfooter {
+            width: 672px;
+        }
+
+        .dmsg {
+            padding-left: 10px;
+            padding: 4px;
+        }
+
+        footer.monthfooter1{
+            border-bottom: 2px solid #4b2e83;
+            display: flex;
+            justify-content: space-between;
+            /* background-color: #4b2e83; */
+            color: white;
+            HEIGHT: 47PX;
+            padding: 0;
+            /* display: inline-block; */
+        }
+        .monthfooter1 p{
+            color: white;
+            font-size: larger;
+        }
+        @media screen and (max-width: 1200px) {
+            footer.monthfooter {
+                width: 672px; /* Set maximum width to 200 pixels on small screens */
+            }
+        }
+        div.txt_para{
+            height: 204px;
+        }
+
+
+        /* final  page */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: white;
+            /* margin-bottom: 20px; */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* border-radius: 8px; */
+        }
+
+        .section h2 {
+            color: #5c2d91;
+            border-bottom: 3px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #333;
+            font-size: 13px;
+            line-height: 1.3;
+
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            margin-top: -7px;
+            border-radius: 8px;
+        }
+        .container{
+            width: 210mm;
+            height: 297mm;
+            margin: auto;
+            background-color: white;
+            padding: 16mm;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* all db datas */
+        img.i1{
+            height: 146px;
+            width: 298px;
+        }
+        #workshop{
+            height: 200px;
+            width: 327px;
+        }
+        div#mentoring.section{
+            height: 233px;
+            width: 752px;
+            margin-left: -61px;
+            background-color: #4b2e83;
+            color:white;
+        }
+        img.i2{
+            height: 211px;
+            width: 294px;
+            margin-top: -59px;
+        }
+        .f1{
+            display: flex;
+        }
+        div#workshop.section{
+            width: 750px;
+            margin-left: -60px;
+            height: 257px;
+            margin-top: -59px;
+        }
+        div#webinar.section{
+            width: 631px;
+            
+        }
+        img.i3{
+            height: 205px;
+            width: 263px;
+        }
+        img.i4{
+            width: 232px;
+            height: 153px;
+            margin-top: -60px;
+        }
+        .section h2{
+            border: 1px solid black;
+            display: inline-block;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        div.row1{
+            display: flex;
+            justify-content: space-between;
+        }
+        div.defaultc{
+            text-align: center;
+            font-size: 11px;
+            padding-top: 84px;
+        }
+        div.row1 img{
+            border: 1px solid black;
+            margin-top: 26px;
+        }
+
+        div.pageno{
+            display: flex;
+            justify-content: space-between;
+        }
+        p.dp{
+            width: 486px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="main" id = "main">
+        <div class="page1" id="page1">
+            <header style="text-shadow: 3px 2px 11px white, 5px 17px 32px white, 0px -3px 14px white;">
+                <h1>N</h1>
+                <h1>I</h1>
+                <h1>T</h1>
+                <h1>T</h1>
+                <h1>T</h1>
+                <h1>R</h1>
+                <h1 style="padding-left: 15px;"></h1>
+                <h1>C</h1>
+                <h1>H</h1>
+                <h1>E</h1>
+                <h1>N</h1>
+                <h1>N</h1>
+                <h1>A</h1>
+                <h1>I</h1>
+            </header>
+            <main>
+                <section class="images-grid">
+
+                    <div style="display: flex;">
+                        <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt="NITTTR Chennai Logo" class="llogo" style="height: 135px; width: 160px;">
+                        <img src="static/{{ image_paths['image1'] }}" alt="Image 1" class="img1" style="border-radius:  0 74px 0 74px; margin: 6px; height: 140px; margin-left: 59px;">
+                        <img src="static/{{ image_paths['image2'] }}" alt="Image 2" class="img2" style="border-radius: 74px 0 74px 0; height: 150px;">
+                    </div><br>
+                    <div style="display: flex;">
+                        <img src="static/{{ image_paths['image3'] }}" alt="Image 3" class="img3" style="border-radius:  0 74px 0 74px; margin: 6px; height: 150px;">
+                        <img src="static/{{ image_paths['image4'] }}" alt="Image 4" class="img4" style="border-radius: 74px 0 74px 0; margin: 6px; height: 150px;">
+                        <img src="static/{{ image_paths['image5'] }}" alt="Image 5" class="img5" style="border-radius:  0 74px 0 74px; height: 150px;">
+                    </div><br>
+                    <div style="display: flex;">
+                        <img src="static/{{ image_paths['image6'] }}" alt="Image 6" class="img6" style="border-radius: 74px 0 74px 0; margin: 6px; height: 150px;">
+                        <img src="static/{{ image_paths['image7'] }}" alt="Image 7" class="img7" style="border-radius:  0 74px 0 74px; margin: 6px; height: 140px;">
+                    </div>
+                </section>
+                <h2>NEWSLETTER</h2>
+                <img class="main-img" src="{{ url_for('static', filename='main.jpeg') }}" style="position: relative;" alt="Main Image">
+                <footer class="monthfooter">
+                    <p>{{ yearly }}</p><p> VOLUME {{ volume }}, ISSUE {{issue}} </p><p>{{ month }} </p>
+                </footer>
+                <div class="pageno" style="width: 100%; color:white">
+                    <p>NITTTR, CHENNAI</p>
+                    <p>Page | 1</p>
+                </div>
+            </main>
+        </div>
+        <br>
+        <div class="page2" id="page2">
+            <header class="page2h">
+                <h1 style="background-color: rgb(12, 12, 12); color: white; padding-left: 20px;" class="nittr">NITTTR CHENNAI</h1>
+                <div class="bgdiv"> 23452345234523423423423423 </div>
+            </header>
+            <center style="height: 72px;"><h2 style="color: rgb(58, 160, 160); font-size: 50px; margin: 3px;">NEWSLETTER</h2></center>
+            <main>
+                <section class="director-message">
+                    <h3 class="dmsg">Director's Message</h3>
+                    <center style="display: flex; justify-content: center;"><img src="{{ url_for('static', filename='directer.jpeg') }}" alt="Director Image" class="director-img"></center>
+                    <footer class="monthfooter1">
+                        <div style="width: 542px;display: flex;flex-direction: row; background-color: #4b2e83; justify-content: space-between; height: 38px;"><p>{{ yearly }}</p> <p>VOLUME {{ volume }}, ISSUE {{issue}} </p></div> <div style="background-color: #4b2e83; height: 38px; width: 125px;"><p>{{ month }} </p></div>
+                    </footer>
+                    <h3 class="dmsg">Director's Message</h3>
+                    <p>Greetings from NITTTR, Chennai.</p>
+                    <div class="txt_para">
+                        <p>{{fp}}</p>
+                        <p>{{sp}}</p>
+                        <p style="font-weight: bold;">Prof. Dr. Usha Natesan </p>
+                        <p style="margin-top: -11px;">Director, NITTTR, Chennai</p>
+                    </div>
+                </section>
+                <br><br><br><br><br>
+                <section class="inside-this-issue">
+                    <h3>INSIDE THIS ISSUE</h3>
+                    <p style="    margin: 0px;
+                    margin-top: -18px; width: 657px;">{{ issue_text }}</p>
+                </section>
+            </main>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 2</p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: space-between;"><h1>TRAINING PROGRAMMES</h1> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic1'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img1'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description1'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" >
+                
+                <h2 style="color: white;">{{ topics['topic2'] }}</h2>
+                <div style="display: flex;     height: 174px; margin-top: -9px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description2']}}</p>
+                    <img src="static/{{ training_images['training_img2'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic3'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img3'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{  descriptions['description3'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color:#97BC62; color: white;">
+                <h2>{{ topics['topic4'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description4'] }}</p>
+
+                <img src="static/{{ training_images['training_img4'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p style="display: flex;">NITTTR, CHENNAI</p>
+                <p>Page | 3</p>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic5'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img5'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description5'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #F98866; color:black">
+                
+                <h2 style="color: white;">{{topics['topic6']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description6']}}</p>
+                    <img src="static/{{ training_images['training_img6'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+            
+                <h2>{{ topics['topic7'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img7'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description7'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px;  background-color:#CADCFC; color: black;">
+                <h2>{{ topics['topic8'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description8'] }}</p>
+
+                <img src="static/{{ training_images['training_img8'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p style="text-align: left;">NITTTR, CHENNAI</p>
+                <p>Page | 4</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic9'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img9'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description9'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #2C5F2D;" >
+                
+                <h2 style="color: white;">{{topics['topic10']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description10']}}</p>
+                    <img src="static/{{ training_images['training_img10'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic11'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img11'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description11'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #D6CDEA; ">
+                <h2>{{ topics['topic12'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description12'] }}</p>
+
+                <img src="static/{{ training_images['training_img12'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 5</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic13'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img13'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description13'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #480082;" >
+                
+                <h2 style="color: white;">{{topics['topic14']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description14']}}</p>
+                    <img src="static/{{ training_images['training_img14'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic15'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img15'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description15'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #97BC62; ">
+                <h2>{{ topics['topic16'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description16'] }}</p>
+
+                <img src="static/{{ training_images['training_img16'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 6</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: space-between;"><h1>{{ main_headings['main_head1'] }}</h1> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic17'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img17'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description17'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #F98866;" >
+                
+                <h2 style="color: white;">{{topics['topic18']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description18']}}</p>
+                    <img src="static/{{ training_images['training_img18'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic19'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img19'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description19'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #CADCFC; ">
+                <h2>{{ topics['topic20'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description20'] }}</p>
+
+                <img src="static/{{ training_images['training_img20'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 7</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic21'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img21'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description21'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #2C5F2D;" >
+                
+                <h2 style="color: white;">{{topics['topic22']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description22']}}</p>
+                    <img src="static/{{ training_images['training_img22'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic23'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img23'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description23'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #D6CDEA; ">
+                <h2>{{ topics['topic24'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description24'] }}</p>
+
+                <img src="static/{{ training_images['training_img24'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 8</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic25'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img25'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description25'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #480082;" >
+                
+                <h2 style="color: white;">{{topics['topic26']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description26']}}</p>
+                    <img src="static/{{ training_images['training_img26'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic27'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img27'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description27'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #97BC62; ">
+                <h2>{{ topics['topic28'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description28'] }}</p>
+
+                <img src="static/{{ training_images['training_img28'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 9</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic29'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img29'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description29'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #F98866;" >
+                
+                <h2 style="color: white;">{{topics['topic30']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description30']}}</p>
+                    <img src="static/{{ training_images['training_img30'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic31'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img31'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description31'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #CADCFC; ">
+                <h2>{{ topics['topic32'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description32'] }}</p>
+
+                <img src="static/{{ training_images['training_img32'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 10</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: space-between;"><h1>{{ main_headings['main_head2'] }}</h1> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic33'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img33'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description33'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #2C5F2D;" >
+                
+                <h2 style="color: white;">{{topics['topic34']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description34']}}</p>
+                    <img src="static/{{ training_images['training_img34'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic35'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img35'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description35'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #D6CDEA; ">
+                <h2>{{ topics['topic36'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description36'] }}</p>
+
+                <img src="static/{{ training_images['training_img36'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 11</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic37'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img37'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description37'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #480082;" >
+                
+                <h2 style="color: white;">{{topics['topic38']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description38']}}</p>
+                    <img src="static/{{ training_images['training_img38'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic39'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img39'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description39'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #97BC62; ">
+                <h2>{{ topics['topic40'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description40'] }}</p>
+
+                <img src="static/{{ training_images['training_img40'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 12</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic41'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img41'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description41'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #F98866;" >
+                
+                <h2 style="color: white;">{{topics['topic42']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description42']}}</p>
+                    <img src="static/{{ training_images['training_img42'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic43'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img43'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description43'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #CADCFC; ">
+                <h2>{{ topics['topic44'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description44'] }}</p>
+
+                <img src="static/{{ training_images['training_img44'] }}" alt="International Seminar Image" class="i4">
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 13</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic45'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img45'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description45'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #2C5F2D;" >
+                
+                <h2 style="color: white;">{{topics['topic46']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description46']}}</p>
+                    <img src="static/{{ training_images['training_img46'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic47'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img47'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description47'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #D6CDEA; ">
+                <h2>{{ topics['topic48'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description48'] }}</p>
+
+                <img src="static/{{ training_images['training_img48'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 14</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: space-between;"><h1>{{ main_headings['main_head3'] }}</h1> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic49'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img49'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description9'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #480082;" >
+                
+                <h2 style="color: white;">{{topics['topic50']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description50']}}</p>
+                    <img src="static/{{ training_images['training_img50'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic51'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img51'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description51'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #97BC62; ">
+                <h2>{{ topics['topic52'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description52'] }}</p>
+
+                <img src="static/{{ training_images['training_img52'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 15</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic53'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img53'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description53'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #F98866;" >
+                
+                <h2 style="color: white;">{{topics['topic54']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description54']}}</p>
+                    <img src="static/{{ training_images['training_img54'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic55'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img55'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description55'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #CADCFC; ">
+                <h2>{{ topics['topic56'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description56'] }}</p>
+
+                <img src="static/{{ training_images['training_img56'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 16</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="workshop">
+                <div style="display: flex; justify-content: right;"> <img src="{{ url_for('static', filename='logo-removebg.png') }}" alt=""style = "width:100px; height:84px"></div>
+                <h2 style="    margin-top: -8px;">{{ topics['topic57'] }}</h2>
+                <div style="display: flex;" class="f1">
+                    <img src="static/{{ training_images['training_img57'] }}" alt="Workshop Image" class="i1">
+                    <p style="width: 390px; margin-left: 9px;">{{ descriptions['description57'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="mentoring" style="background-color: #2C5F2D;" >
+                
+                <h2 style="color: white;">{{topics['topic58']}}</h2>
+                <div style="display: flex;     height: 220px;">
+                    <p style="color: white;width: 460px;">{{descriptions['description58']}}</p>
+                    <img src="static/{{ training_images['training_img58'] }}" alt="Mentoring Workshop Image" class="i2">
+                </div>
+            </div>
+            <div class="section" id="webinar" style="width: 751px;height: 250px;
+            margin-left: -60px; ">
+                <h2>{{ topics['topic59'] }}</h2>
+                <div style="display: flex;">
+                <img src="static/{{ training_images['training_img59'] }}" alt="Webinar Image" class="i3">
+
+                    <p class="dp">{{ descriptions['description59'] }}</p>
+                </div>
+            </div>
+            <div class="section" id="seminar" style="width: 751px;margin-left: -60px;height: 169px; background-color: #D6CDEA; ">
+                <h2>{{ topics['topic60'] }}</h2>
+               <div style="display: flex;">
+                <p style="width: 520px;">{{ descriptions['description60'] }}</p>
+
+                <img src="static/{{ training_images['training_img60'] }}" alt="International Seminar Image" class="i4" >
+               </div>
+            </div>
+            <div class="pageno">
+                <p>NITTTR, CHENNAI</p>
+                <p>Page | 17</p>
+            </div>
+        </div>
+
+        <div class="container" style="display: flex; background-color: #8AECFF;">
+            <div>
+                <h2 style="text-align: center;">NITTTR CHENNAI ON SOCIAL MEDIA</h2></div>
+            <div style="    border: 2px solid gray;padding: 27px; ">
+                <!-- first row -->
+                <div class="row1" style="display: flex;">
+                    <div >
+                        <img src="static/{{ training_images['training_img61'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img62'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img63'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                </div>
+                <!-- second div -->
+                <div class="row1" style="display: flex;">
+                    <div >
+                        <img src="static/{{ training_images['training_img64'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img65'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img66'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                </div>
+                <!-- row 3 -->
+                <div class="row1" style="display: flex;">
+                    <div >
+                        <img src="static/{{ training_images['training_img67'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img68'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img69'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                </div>
+                <!-- row 4 -->
+                <div class="row1" style="display: flex;">
+                    <div >
+                        <img src="static/{{ training_images['training_img70'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img71'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                    <div>
+                        <img src="static/{{ training_images['training_img72'] }}" alt=""  style="width: 188px;height: 132px;">
+                    </div>
+                </div>      
+            </div>
+            <div class="defaultc">
+                <h2>NATIONAL INSTITUTE OF TECHNICAL TEACHERS TRAINING AND RESEARCH</h2>
+                <h2>TARAMANI, CHENNAI 600113 TAMILNADU</h2>
+                <h2>[MINISTRY OF EDUCATION, GOVT OF INDIA]</h2>
+                <a href="https://www.nitttrc.ac.in/" style="text-decoration: none; color: black; font-size: 13px;"><h2>www.nitttrc.ac.in</h2></a>
+             <h2>Tel:(+91-44) 2254 405/406/442</h2>
+            </div>
+        </div>
+    </div>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+    function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF('p', 'mm', 'a4'); // use 'mm' for millimeters and 'a4' for A4 size
+        const pdfWidth = 210; // A4 width in mm
+        const pdfHeight = 297; // A4 height in mm
+        const margin = 0.1;
+        const effectivePdfHeight = pdfHeight - 2 * margin;
+        
+        const sections = [
+            document.getElementById('page1'),
+            document.getElementById('page2'),
+            ...document.querySelectorAll('.container')
+        ];
+
+        function addSectionToPDF(section, callback) {
+            html2canvas(section).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = pdfWidth - 2 * margin;
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                let heightLeft = imgHeight;
+                let position = margin;
+
+                pdf.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+                heightLeft -= effectivePdfHeight;
+
+                while (heightLeft > 0) {
+                    pdf.addPage();
+                    position = heightLeft - imgHeight + margin;
+                    pdf.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+                    heightLeft -= effectivePdfHeight;
+                }
+
+                callback();
+            });
+        }
+
+        function processSections(index) {
+            if (index >= sections.length) {
+                pdf.save('newsletter.pdf');
+                return;
+            }
+
+            addSectionToPDF(sections[index], () => {
+                if (index < sections.length - 1) {
+                    pdf.addPage();
+                }
+                processSections(index + 1);
+            });
+        }
+
+        processSections(0);
+    }
+</script>
+
+    
+    
+    
+
+</body>
+</html>
